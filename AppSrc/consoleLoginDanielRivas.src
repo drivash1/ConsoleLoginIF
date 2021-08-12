@@ -15,7 +15,7 @@ Procedure loginBasico
 	//IGUALACIONES DE VARIABLES
 	//USUARIO ES IGUAL A ADMIN Y 
 	//PASS ES IGUAL A 12345
-	Move "admin" to usuario
+	Move "admi" to usuario
 	Move "12345" to pass
 	
 	
@@ -27,14 +27,14 @@ Procedure loginBasico
 	
 	
 	//PERO SI EL USUARIO ES DIFERENTE A ADMIN Y PASS ES DIFERENTE A 12345
-	//Else If (usuario != "admin" and pass != "12345") Begin
+	Else If (usuario <> "admin" and pass <> "12345" or usuario <> "admin" and pass = "12345") Begin
 		//USUARIO O CONTRASE¥A INCORRECTA
-		//Move "Usuario y/o contrase¤a incorrecta" to mensaje
-	//End
+		Move "Usuario y/o contrase¤a incorrecta" to mensaje
+	End
 	
 	
 	//PERO SI USUARIO ES IGUAL A VACIO Y PASS ES IGUAL A VACIO
-	Else If (usuario = " " and pass = " ") Begin
+	Else If (usuario = "" and pass = "") Begin
 		//IGUAL MENSAJE A VACIO
 		Move "Usuario o contrase¤a vacio" to mensaje
 	End

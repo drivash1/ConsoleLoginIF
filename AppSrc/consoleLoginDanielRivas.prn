@@ -20,7 +20,7 @@ Including file: dfallent.pkd    (C:\Program Files (x86)\DataFlex 18.2\Pkg\dfalle
 75290>        //IGUALACIONES DE VARIABLES
 75290>        //USUARIO ES IGUAL A ADMIN Y 
 75290>        //PASS ES IGUAL A 12345
-75290>        Move "admin" to usuario
+75290>        Move "admi" to usuario
 75291>        Move "12345" to pass
 75292>        
 75292>        
@@ -32,46 +32,46 @@ Including file: dfallent.pkd    (C:\Program Files (x86)\DataFlex 18.2\Pkg\dfalle
 75295>        
 75295>        
 75295>        //PERO SI EL USUARIO ES DIFERENTE A ADMIN Y PASS ES DIFERENTE A 12345
-75295>        //Else If (usuario != "admin" and pass != "12345") Begin
-75295>                //USUARIO O CONTRASE¥A INCORRECTA
-75295>                //Move "Usuario y/o contrase¤a incorrecta" to mensaje
-75295>        //End
-75295>        
-75295>        
-75295>        //PERO SI USUARIO ES IGUAL A VACIO Y PASS ES IGUAL A VACIO
-75295>        Else If (usuario = " " and pass = " ") Begin
-75298>                //IGUAL MENSAJE A VACIO
-75298>                Move "Usuario o contrase¤a vacio" to mensaje
+75295>        Else If (usuario <> "admin" and pass <> "12345" or usuario <> "admin" and pass = "12345") Begin
+75298>                //USUARIO O CONTRASE¥A INCORRECTA
+75298>                Move "Usuario y/o contrase¤a incorrecta" to mensaje
 75299>        End
 75299>        
-75299>                
-75299>        //SI NO
-75299>        Else Begin
-75300>                //IGUALAR CONTACTE AL DESARROLLADOR
-75300>                Move "Contacte al desarrollador de este login." to mensaje
-75301>        End
-75301>        
-75301>        
-75301>        //SE IMPRIME EN PANTALLA EL CONTENIDO DE LA VARIABLE MENSAJE
-75301>        Send Info_Box mensaje "El sistema dice"
-75302>        
-75302>        
-75302>//FIN DEL PROCEDIMIENTO
-75302>End_Procedure
-75303>
-75303>
-75303>//SE IMPRIME EL CONTENIDO DEL PROCEDURE
-75303>Send loginBasico
-75304>
+75299>        
+75299>        //PERO SI USUARIO ES IGUAL A VACIO Y PASS ES IGUAL A VACIO
+75299>        Else If (usuario = "" and pass = "") Begin
+75302>                //IGUAL MENSAJE A VACIO
+75302>                Move "Usuario o contrase¤a vacio" to mensaje
+75303>        End
+75303>        
+75303>                
+75303>        //SI NO
+75303>        Else Begin
+75304>                //IGUALAR CONTACTE AL DESARROLLADOR
+75304>                Move "Contacte al desarrollador de este login." to mensaje
+75305>        End
+75305>        
+75305>        
+75305>        //SE IMPRIME EN PANTALLA EL CONTENIDO DE LA VARIABLE MENSAJE
+75305>        Send Info_Box mensaje "El sistema dice"
+75306>        
+75306>        
+75306>//FIN DEL PROCEDIMIENTO
+75306>End_Procedure
+75307>
+75307>
+75307>//SE IMPRIME EL CONTENIDO DEL PROCEDURE
+75307>Send loginBasico
+75308>
 Summary
 Memory Available: 2147483646
 Total Warnings : 0
 Total Errors   : 0
-Total Symbols  : 43284
+Total Symbols  : 43286
 Total Resources: 0
-Total Commands : 75303
+Total Commands : 75307
 Total Windows  : 1
 Total Pages    : 1
-Static Data    : 453109
+Static Data    : 453257
 Message area   : 518601
-Total Blocks   : 27028
+Total Blocks   : 27031
