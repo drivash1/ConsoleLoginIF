@@ -1,0 +1,77 @@
+Compiling Program: C:\GIT\loginDataflex\AppSrc\consoleLoginDanielRivas.src
+Memory Available: 2147483646
+1>Use DfAllEnt.pkg
+Using pre-compiled package DFALLENT.PKG
+Including file: dfallent.pkd    (C:\Program Files (x86)\DataFlex 18.2\Pkg\dfallent.pkd)
+75288>
+75288>Procedure loginBasico
+#REM AMBIGUOUS METHODS ON .DESKTOP. ARE .NOT. RECOMMENDED (OBSOLETE TECHNIQUE)
+75290>        
+75290>        //LOGIN BµSICO
+75290>        //DANIEL ESTUARDO RIVAS HERRERA
+75290>        //PRUEBAS SID - SEGUNDO DIA LABORAL
+75290>        //APRENDIZAJE DE USO DE DATAFLEX
+75290>        
+75290>                
+75290>        //VARIBALES QUE USAREMOS
+75290>        String usuario pass mensaje
+75290>        
+75290>        
+75290>        //IGUALACIONES DE VARIABLES
+75290>        //USUARIO ES IGUAL A ADMIN Y 
+75290>        //PASS ES IGUAL A 12345
+75290>        Move "admin" to usuario
+75291>        Move "12345" to pass
+75292>        
+75292>        
+75292>        //SI USUARIO ES IGUAL A ADMIN Y PASS ES IGUAL A 12345, SE CUMPLE
+75292>        If (usuario = "admin" and pass = "12345") Begin
+75294>                //IGUALAR MENSAJE A INGRESO CORRECTO
+75294>                Move "Ingreso correcto" to mensaje
+75295>        End
+75295>        
+75295>        
+75295>        //PERO SI EL USUARIO ES DIFERENTE A ADMIN Y PASS ES DIFERENTE A 12345
+75295>        //Else If (usuario != "admin" and pass != "12345") Begin
+75295>                //USUARIO O CONTRASE¥A INCORRECTA
+75295>                //Move "Usuario y/o contrase¤a incorrecta" to mensaje
+75295>        //End
+75295>        
+75295>        
+75295>        //PERO SI USUARIO ES IGUAL A VACIO Y PASS ES IGUAL A VACIO
+75295>        Else If (usuario = " " and pass = " ") Begin
+75298>                //IGUAL MENSAJE A VACIO
+75298>                Move "Usuario o contrase¤a vacio" to mensaje
+75299>        End
+75299>        
+75299>                
+75299>        //SI NO
+75299>        Else Begin
+75300>                //IGUALAR CONTACTE AL DESARROLLADOR
+75300>                Move "Contacte al desarrollador de este login." to mensaje
+75301>        End
+75301>        
+75301>        
+75301>        //SE IMPRIME EN PANTALLA EL CONTENIDO DE LA VARIABLE MENSAJE
+75301>        Send Info_Box mensaje "El sistema dice"
+75302>        
+75302>        
+75302>//FIN DEL PROCEDIMIENTO
+75302>End_Procedure
+75303>
+75303>
+75303>//SE IMPRIME EL CONTENIDO DEL PROCEDURE
+75303>Send loginBasico
+75304>
+Summary
+Memory Available: 2147483646
+Total Warnings : 0
+Total Errors   : 0
+Total Symbols  : 43284
+Total Resources: 0
+Total Commands : 75303
+Total Windows  : 1
+Total Pages    : 1
+Static Data    : 453109
+Message area   : 518601
+Total Blocks   : 27028

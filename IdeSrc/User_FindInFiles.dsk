@@ -1,0 +1,13 @@
+[Header]
+Mask=*.src;*.vw;*.sl;*.dg;*.rv;*.bp;*.pkg;*.wo;*.dd;*.inc;*.tpl;*.dfo;*.asp;*.asa;*.html;*.css;*.js
+Active=0
+SubDirectories=1
+WholeWordOnly=0
+SearchWhere=0
+Location=C:\GIT\loginDataflex\IdeSrc\User_FindInFiles.dsk
+[C:\GIT\loginDataflex\AppSrc]
+IsEnabled=1
+[C:\GIT\loginDataflex\DDSrc]
+IsEnabled=1
+[C:\GIT\loginDataflex\AppHtml]
+IsEnabled=1

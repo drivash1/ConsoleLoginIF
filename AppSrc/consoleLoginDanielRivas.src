@@ -1,0 +1,59 @@
+Use DfAllEnt.pkg
+
+Procedure loginBasico
+	
+	//LOGIN BµSICO
+	//DANIEL ESTUARDO RIVAS HERRERA
+	//PRUEBAS SID - SEGUNDO DIA LABORAL
+	//APRENDIZAJE DE USO DE DATAFLEX
+	
+		
+	//VARIBALES QUE USAREMOS
+	String usuario pass mensaje
+	
+	
+	//IGUALACIONES DE VARIABLES
+	//USUARIO ES IGUAL A ADMIN Y 
+	//PASS ES IGUAL A 12345
+	Move "admin" to usuario
+	Move "12345" to pass
+	
+	
+	//SI USUARIO ES IGUAL A ADMIN Y PASS ES IGUAL A 12345, SE CUMPLE
+	If (usuario = "admin" and pass = "12345") Begin
+		//IGUALAR MENSAJE A INGRESO CORRECTO
+		Move "Ingreso correcto" to mensaje
+	End
+	
+	
+	//PERO SI EL USUARIO ES DIFERENTE A ADMIN Y PASS ES DIFERENTE A 12345
+	//Else If (usuario != "admin" and pass != "12345") Begin
+		//USUARIO O CONTRASE¥A INCORRECTA
+		//Move "Usuario y/o contrase¤a incorrecta" to mensaje
+	//End
+	
+	
+	//PERO SI USUARIO ES IGUAL A VACIO Y PASS ES IGUAL A VACIO
+	Else If (usuario = " " and pass = " ") Begin
+		//IGUAL MENSAJE A VACIO
+		Move "Usuario o contrase¤a vacio" to mensaje
+	End
+	
+		
+	//SI NO
+	Else Begin
+		//IGUALAR CONTACTE AL DESARROLLADOR
+		Move "Contacte al desarrollador de este login." to mensaje
+	End
+	
+	
+	//SE IMPRIME EN PANTALLA EL CONTENIDO DE LA VARIABLE MENSAJE
+	Send Info_Box mensaje "El sistema dice"
+	
+	
+//FIN DEL PROCEDIMIENTO
+End_Procedure
+
+
+//SE IMPRIME EL CONTENIDO DEL PROCEDURE
+Send loginBasico
